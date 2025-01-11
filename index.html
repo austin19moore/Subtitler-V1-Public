@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body --bs-body-color>
+    <div id="soxErrorLabel" class="alert alert-danger" role="alert" style="display: none;">
+      Error: Sox not configured correctly!
+      <button id="soxErrorLabelHide" type="button" class="btn-close float-end"></button>
+    </div>
+    <div id="authKeyErrorLabel" class="alert alert-danger" role="alert" style="display: none;">
+      Error: auth_key.json not found in 'documents/subtitler-v1!
+      <button id="authKeyErrorLabelHide" type="button" class="btn-close float-end"></button>
+    </div>
+    <div>
+      <div>
+        <h1>Select user</h1>
+        <select id="userSelect" class="form-select"></select>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Select Source Lang</h1>
+          <select id="sourceLangSelect" class="form-select"></select>
+        </div>
+        <div class="mb-1 col-sm-6">
+          <h1>Select Target Lang</h1>
+          <select id="targetLangSelect" class="form-select"></select>
+        </div>
+      </div>
+      <div class="position-relative">
+        <button type="button" class="btn btn-light" id="startStopButton">Start</button>
+        <svg id="recordingIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-record-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+          <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+        </svg>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./src/renderer.js"></script>
+</html>
